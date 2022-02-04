@@ -5,7 +5,7 @@
     <title>Red Hot Chili Beppe</title>
 
     <link rel="icon" type="image/png" href="red-hot-chili-beppe.png" >
-    
+
     <meta name="apple-mobile-web-app-title" content="Red Hot Chili Beppe" />
     <meta name="application-name" content="Red Hot Chili Beppe" />
 
@@ -24,37 +24,78 @@
         }
 
         body {
-            background: url(red-hot-chili-beppe.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-color: black;
-    background-position: top center;
+            background: url(red-hot-chili-beppe.jpg?v=1);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-color: black;
+            background-position: top center;
         }
 
         img{
             position: fixed;
-    bottom: 20px;
-    max-width: 200px;
-    right: 20px;
+            bottom: 40px;
+            max-width: 200px;
+            right: 40px;
         }
 
         @media (max-width: 600px) {
             body {
-                background-size: contain;
+                background-size: 150%;
             }
 
             img{
                 margin: 0 auto;
     right: 0;
     left: 0;
-    bottom: 40px;
+    bottom: 90px;
     max-width: 200px;
-    width: 80vmin;
+    width: 60vmin;
             }
+}
+
+.share {
+    display: flex;
+    flex-wrap: wrap;
+    font-family: sans-serif;
+    font-size: .8rem;
+    position: absolute;
+    bottom: 10px;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.share > iframe:first-child{
+    position: relative !important;
+    top: -4px;
+  margin-right: 5px;
+}
+#credits {
+  color: #fff;
+  font-family: sans-serif;
+  text-align: center;
+  font-size: 12px;
+  width: 100%;
+}
+
+#credits a {
+  color: #fff;
 }
     </style>
 </head>
 <body>
-    <img src="red-hot-chili-beppe.png" alt="Red Hot Chili Beppe">
+    <img src="red-hot-chili-beppe.png?v=1" alt="Red Hot Chili Beppe">
+    <div class="share">
+        <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Red Hot Chili Beppe">Tweet</a>
+        <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fredhotchilibeppe.com&width=200&layout=button_count&action=like&size=small&share=true&height=46&appId=863326647873551" width="170" height="28" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+
+
+        <div id="credits">
+            Made by <a href="http://miriorama.com" target="_blank">Miriorama</a>
+
+            <script src="/js/script.js?v=1"></script>
+		    <script>window.twttr = (function(d, s, id) {  var js, fjs = d.getElementsByTagName(s)[0],    t = window.twttr || {};  if (d.getElementById(id)) return t;  js = d.createElement(s);  js.id = id;  js.src = "https://platform.twitter.com/widgets.js";  fjs.parentNode.insertBefore(js, fjs);  t._e = [];  t.ready = function(f) {    t._e.push(f);  };  return t;}(document, "script", "twitter-wjs"));</script>
+        </div>
+    </div>
 </body>
 </html>
